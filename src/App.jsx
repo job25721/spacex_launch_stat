@@ -62,7 +62,7 @@ export default () => {
       <div
         style={{
           overflow: "auto",
-          height: "1000px",
+          height: "900px",
           width: "550px",
           background: "#fff",
           display: "block",
