@@ -25,7 +25,6 @@ export default () => {
             ></button>
           );
         if (error) return <h1>404 not found!!!</h1>;
-
         return (
           <>
             {data.launches.map((launch) => (
