@@ -13,7 +13,7 @@ export default ({
     <div
       className="card"
       style={{
-        width: "500px",
+        // width: "500px",
         marginBottom: "20px",
         display: "block",
         marginLeft: "auto",

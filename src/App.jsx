@@ -17,15 +17,14 @@ export default () => {
       </h1>
       <div
         style={{
-          overflow: "auto",
-          height: "900px",
-          width: "550px",
+          height: "75vh",
           background: "#fff",
           display: "block",
           marginLeft: "auto",
           marginRight: "auto",
           padding: "20px",
-          borderRadius: "13px",
+          borderRadius: "5px",
+          position: "relative",
         }}
       >
         <ResultBox />

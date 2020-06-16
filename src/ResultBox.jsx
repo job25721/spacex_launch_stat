@@ -77,19 +77,29 @@ const ResultBox = () => {
           ""
         )}
       </form>
-      {!onSearch ? (
-        error ? (
+      <div
+        style={{
+          overflow: "auto",
+          height: "60vh",
+          position: "relative",
+          borderRadius: "5px",
+          padding: "10px",
+        }}
+      >
+        {!onSearch ? (
+          error ? (
+            <h1 className="subtitle is-5 has-text-danger">404 not found</h1>
+          ) : (
+            <Launches />
+          )
+        ) : error ? (
           <h1 className="subtitle is-5 has-text-danger">404 not found</h1>
+        ) : onLoading ? (
+          <Loading />
         ) : (
-          <Launches />
-        )
-      ) : error ? (
-        <h1 className="subtitle is-5 has-text-danger">404 not found</h1>
-      ) : onLoading ? (
-        <Loading />
-      ) : (
-        <LaunchesItem launch={contents.launch} />
-      )}
+          <LaunchesItem launch={contents.launch} />
+        )}
+      </div>
     </>
   );
 };
