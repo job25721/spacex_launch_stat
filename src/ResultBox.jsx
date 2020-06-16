@@ -15,6 +15,8 @@ const ResultBox = () => {
   const _executeSearch = async (e) => {
     e.preventDefault();
     triggerErr(false);
+    console.log(searchId);
+
     if (searchId !== "") {
       setOnSearch(true);
       setLoading(true);
@@ -83,7 +85,13 @@ const ResultBox = () => {
       ) : error ? (
         <h1 className="subtitle is-5 has-text-danger">404 not found</h1>
       ) : onLoading ? (
-        <button className="is-loading button is-dark"></button>
+        <div
+          className="notification is-info"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <button className="is-loading button is-info"></button>
+          <span className="subtitle is-6">Loading...</span>
+        </div>
       ) : (
         <LaunchesItem launch={contents.launch} />
       )}
