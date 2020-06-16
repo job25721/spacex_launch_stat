@@ -13,7 +13,7 @@ export default () => {
         className="title is-1 has-text-white has-text-centered"
         style={{ paddingTop: "30px" }}
       >
-        SpaceX Launches
+        SpaceX Launches Stat
       </h1>
       <div
         style={{
