@@ -2,6 +2,7 @@ import React from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import LaunchesItem from "./LaunchesItem";
+import Loading from "./Loading";
 const LAUNCHES_QUERY = gql`
   query LaunchesQuery {
     launches {
@@ -17,13 +18,7 @@ export default () => {
   return (
     <Query query={LAUNCHES_QUERY}>
       {({ loading, error, data }) => {
-        if (loading)
-          return (
-            <button
-              className="is-loading button is-dark is-light"
-              style={{ width: "50px", height: "50px" }}
-            ></button>
-          );
+        if (loading) return <Loading />;
         if (error) return <h1>404 not found!!!</h1>;
         return (
           <>
